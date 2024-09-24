@@ -1,0 +1,38 @@
+.header {
+  padding: 2px 80px;
+  background-color: #fff;
+  color: #212429;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+  height: 50px;
+}
+
+.header-title {
+  font-size: 18px;
+  color: #212429;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 4px 16px;
+  }
+
+  .header-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .header-container {
+    gap: 20px;
+  }
+}

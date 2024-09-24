@@ -1,0 +1,45 @@
+footer {
+  background-color: #f4f4f4;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #212429;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 15px 0;
+    font-size: 12px;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 10px 0;
+    font-size: 10px;
+  }
+
+  footer .footer-container {
+    gap: 3px;
+  }
+}
