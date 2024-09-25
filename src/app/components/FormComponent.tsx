@@ -37,7 +37,7 @@ const FormComponent: React.FC = () => {
         <InputComponent
           label="Telefone"
           type="text"
-          placeholder="(00) 00000-0000"
+          placeholder="(99) 9999[9]-9999"
           register={register('phone')}
           error={errors.phone?.message}
         />
