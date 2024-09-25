@@ -1,5 +1,4 @@
-'use client';
-
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -11,8 +10,20 @@ import logo from '@/app/assets/img.svg'
 import ButtonComponent from '../components/Button';
 import CardComponent from '../components/Card';
 
+import { Suspense } from 'react';
+
+export const dynamic = 'force-dynamic';
+
 
 export default function ResultPage() {
+  return (
+    <Suspense fallback={<div>Carregando...</div>}>
+      <Content />
+    </Suspense>
+  );
+}
+
+function Content() {
   const searchParams = useSearchParams();
   const name = searchParams.get('name');
   const phone = searchParams.get('phone');
