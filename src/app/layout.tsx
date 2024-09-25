@@ -27,6 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt" className={`${nunitoSans.variable} ${darkerGrotesque.variable}`}>
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="32x32" />
       <body className="font-sans">
         <HeaderComponent />
         {children}
