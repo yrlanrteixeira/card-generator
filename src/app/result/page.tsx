@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { ChevronLeft } from 'lucide-react';
 
 import '@/app/styles/ResultPage.css';
+import logo from '@/app/assets/img.svg'
 
 import ButtonComponent from '../components/Button';
 import CardComponent from '../components/Card';
@@ -23,7 +24,7 @@ export default function ResultPage() {
         <div className="result-content">
           <div className="result-image-container">
             <Image
-              src={require('@/app/assets/img.svg')}
+              src={logo}
               alt="Imagem do Formulário"
               className="result-image"
               width={360}
