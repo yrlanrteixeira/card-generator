@@ -1,24 +1,25 @@
 import Image from 'next/image';
 
 import img from '@/app/assets/img.svg';
-
 import FormComponent from './components/FormComponent';
 
 export default function HomePage() {
   return (
     <>
-      <div className="form-page">
+      <main className="form-page">
         <div className="content-header">
           <h1>Gerador de Cartão de Visita</h1>
-          <p>Crie grátis seu cartão de visita em passos rápidos! Você o insere no Instagram e demais canais digitais.</p>
+          <p>
+            Crie grátis seu cartão de visita em passos rápidos! Você o insere no Instagram e demais canais digitais.
+          </p>
         </div>
         <div className="container">
-          <div className="form-content">
+          <section className="form-content" aria-labelledby="form-section">
             <div className="image-container">
               <Image
                 src={img}
-                alt="Imagem do Formulário"
-                className='image'
+                alt="Ilustração de um cartão de visita digital"
+                className="image"
                 width={360}
                 height={360}
               />
@@ -26,9 +27,9 @@ export default function HomePage() {
             <div className="form-container-wrapper">
               <FormComponent />
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </main>
     </>
   );
 }

@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${nunitoSans.variable} ${darkerGrotesque.variable}`}>
+    <html lang="pt" className={`${nunitoSans.variable} ${darkerGrotesque.variable}`}>
       <body className="font-sans">
         <HeaderComponent />
         {children}

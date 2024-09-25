@@ -52,7 +52,7 @@ const FormComponent: React.FC = () => {
       <div className="consent-text">
         <ul>
           <li>Ao preencher o formulário, concordo em receber comunicações de acordo com meus interesses.</li>
-          <li>Ao informar meus dados, eu concordo com a <a href="#">Política de privacidade</a>.</li>
+          <li>Ao informar meus dados, eu concordo com a <a href="https://legal.rdstation.com/pt/privacy-policy/">Política de privacidade</a>.</li>
         </ul>
         <p>* Você pode alterar suas permissões de comunicação a qualquer tempo.</p>
       </div>

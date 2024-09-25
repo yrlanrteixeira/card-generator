@@ -45,19 +45,6 @@ a {
   text-decoration: none;
 }
 
-.back-link,
-.test-link,
-a {
-  text-decoration: none;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-}
-
-.back-link-text {
-  margin-left: 8px;
-}
-
 @media (max-width: 768px) {
   .back-link-text {
     font-size: 14px;

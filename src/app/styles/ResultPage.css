@@ -92,6 +92,45 @@
   color: #000;
 }
 
+@media (max-width: 1200px) {
+  .result-page {
+    padding: 14px 60px;
+  }
+
+  .result-container {
+    max-width: 1100px;
+  }
+
+  .result-content {
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .result-card {
+    padding: 50px;
+  }
+
+  .result-card h2 {
+    font-size: 18px;
+  }
+
+  .result-card p {
+    font-size: 14px;
+  }
+
+  .result-image-container {
+    max-width: 320px;
+  }
+
+  .result-text {
+    font-size: 13px;
+  }
+
+  .divider-vertical {
+    height: 80px;
+  }
+}
+
 @media (max-width: 768px) {
   .result-page {
     padding: 14px 16px;
