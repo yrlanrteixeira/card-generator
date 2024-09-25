@@ -1,4 +1,7 @@
 import Image from 'next/image';
+
+import img from '@/app/assets/img.svg';
+
 import FormComponent from './components/FormComponent';
 
 export default function HomePage() {
@@ -13,7 +16,7 @@ export default function HomePage() {
           <div className="form-content">
             <div className="image-container">
               <Image
-                src={require('@/app/assets/img.svg')}
+                src={img}
                 alt="Imagem do Formulário"
                 className='image'
                 width={360}

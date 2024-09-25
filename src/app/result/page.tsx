@@ -3,11 +3,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import '@/app/styles/ResultPage.css';
-import ButtonComponent from '../components/Button';
 import { ChevronLeft } from 'lucide-react';
 
-const ResultPage = () => {
+import '@/app/styles/ResultPage.css';
+
+import ButtonComponent from '../components/Button';
+import CardComponent from '../components/Card';
+
+export default function ResultPage() {
   const searchParams = useSearchParams();
   const name = searchParams.get('name');
   const phone = searchParams.get('phone');
@@ -35,22 +38,11 @@ const ResultPage = () => {
                 </>
               </Link>
             </div>
-            <div className="result-card">
-              <div className="card-content">
-                <Image
-                  src={require('@/app/assets/symbol-rd-station-default.svg')}
-                  alt="Logo"
-                  width={60}
-                  height={60}
-                />
-                <div className="divider-vertical" />
-                <div className="user-info">
-                  <h2>{name || 'Nome e Sobrenome'}</h2>
-                  <p>{phone || '(00) 0000-0000'}</p>
-                  <p>{email || 'meuemail@email.com'}</p>
-                </div>
-              </div>
-            </div>
+            <CardComponent
+              name={name ?? ''}
+              phone={phone ?? ''}
+              email={email ?? ''}
+            />
             <ButtonComponent label="Baixar Cartão" disabled />
             <div className="result-text">
               <Link href="https://www.rdstation.com/produtos/marketing/" className="test-link">
@@ -64,4 +56,3 @@ const ResultPage = () => {
   );
 };
 
-export default ResultPage;

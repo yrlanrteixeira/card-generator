@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import '@/app/styles/Header.css'; // Certifique-se de que o caminho esteja correto
+
+import '@/app/styles/Header.css';
+import logo from '@/app/assets/logo-rd-station-default.svg';
 
 const HeaderComponent: React.FC = () => {
   return (
@@ -8,7 +10,7 @@ const HeaderComponent: React.FC = () => {
       <div className="header-container">
         <div className="logo">
           <Image
-            src={require('@/app/assets/logo-rd-station-default.svg')}
+            src={logo}
             alt="Logo"
             width={150}
             height={50}

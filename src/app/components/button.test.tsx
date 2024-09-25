@@ -2,8 +2,6 @@ import { describe, test } from "vitest";
 import { render, screen } from "@testing-library/react";
 import ButtonComponent from "@/app/components/Button";
 
-
-
 describe("Button", () => {
   test("deve renderizar o botão", () => {
     render(<ButtonComponent label="Click me" />);
@@ -28,6 +26,5 @@ describe("Button", () => {
     const button = screen.getByRole("button");
     expect(button).toHaveClass("button-disabled");
   });
-
 
 });

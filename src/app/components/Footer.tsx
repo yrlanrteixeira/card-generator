@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import '@/app/styles/Footer.css';
 
 const FooterComponent: React.FC = () => {

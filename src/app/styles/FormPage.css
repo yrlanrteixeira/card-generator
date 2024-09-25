@@ -22,7 +22,7 @@
 
 .content-header p {
   font-size: 18px;
-  color: #f1f3f5;
+  color: #ffffff;
 }
 
 .input-field {
@@ -200,7 +200,11 @@
   }
 
   .form-page {
-    padding: 14px 8px;
+    padding: 14px 10px;
+    min-height: 100vh;
+  }
+  .form-container {
+    margin-bottom: 40px;
   }
 
   .input-group {
