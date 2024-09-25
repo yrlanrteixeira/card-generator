@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { Divider } from '@fluentui/react-divider';
 import '@/app/styles/ResultPage.css';
 import ButtonComponent from '../components/Button';
 import { ChevronLeft } from 'lucide-react';
