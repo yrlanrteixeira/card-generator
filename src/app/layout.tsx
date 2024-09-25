@@ -1,9 +1,10 @@
 import './globals.css';
-import HeaderComponent from './components/HeaderComponent';
+import HeaderComponent from './components/Header';
 import { Nunito_Sans, Darker_Grotesque } from 'next/font/google';
+import FooterComponent from './components/Footer';
 
-const nunitoSans = Nunito_Sans({ subsets: ['latin'] });
-const darkerGrotesque = Darker_Grotesque({ subsets: ['latin'] });
+const nunitoSans = Nunito_Sans({ subsets: ['latin'], variable: '--font-nunito' });
+const darkerGrotesque = Darker_Grotesque({ subsets: ['latin'], variable: '--font-darker' });
 
 export const metadata = {
   title: 'Gerador de Cartão de Visita',
@@ -12,10 +13,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={nunitoSans.className}>
+    <html lang="en" className={`${nunitoSans.variable} ${darkerGrotesque.variable}`}>
+      <body className="font-sans">
         <HeaderComponent />
         {children}
+        <FooterComponent />
       </body>
     </html>
   );

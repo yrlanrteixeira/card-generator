@@ -4,7 +4,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { formSchema, FormData } from '../validation/form-validation';
 import '@/app/styles/FormPage.css';
-import ButtonComponent from './ButtonComponent';
+import ButtonComponent from './Button';
+import InputComponent from './Input';
 
 const FormComponent: React.FC = () => {
   const router = useRouter();
@@ -16,42 +17,34 @@ const FormComponent: React.FC = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit: (data: FormData) => void = (data: FormData) => {
     router.push(`/result?name=${data.name}&phone=${data.phone}&email=${data.email}`);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="form-container">
-      <label htmlFor="name">Nome</label>
-      <input
+      <InputComponent
+        label="Nome"
         type="text"
         placeholder="Nome"
-        {...register('name')}
-        className="input-field"
+        register={register('name')}
+        error={errors.name?.message}
       />
-      {errors.name && <span className="error">{errors.name.message}</span>}
-
       <div className="fields-row">
-        <div className="input-group">
-          <label htmlFor="phone">Telefone</label>
-          <input
-            type="text"
-            placeholder="(00) 00000-0000"
-            {...register('phone')}
-            className="input-field"
-          />
-          {errors.phone && <span className="error">{errors.phone.message}</span>}
-        </div>
-        <div className="input-group">
-          <label htmlFor="email">E-mail</label>
-          <input
-            type="email"
-            placeholder="nome@email.com"
-            {...register('email')}
-            className="input-field"
-          />
-          {errors.email && <span className="error">{errors.email.message}</span>}
-        </div>
+        <InputComponent
+          label="Telefone"
+          type="text"
+          placeholder="(00) 00000-0000"
+          register={register('phone')}
+          error={errors.phone?.message}
+        />
+        <InputComponent
+          label="E-mail"
+          type="email"
+          placeholder="nome@email.com"
+          register={register('email')}
+          error={errors.email?.message}
+        />
       </div>
       <div className="consent-text">
         <ul>

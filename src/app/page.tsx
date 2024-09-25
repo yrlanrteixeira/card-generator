@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import FormComponent from './components/FormComponent';
-import FooterComponent from './components/FooterComponent';
 
 export default function HomePage() {
   return (
@@ -27,7 +26,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <FooterComponent />
     </>
   );
 }
