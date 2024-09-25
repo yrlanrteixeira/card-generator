@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import InputMask from 'react-input-mask';
 
 import { formSchema, FormData } from '../validation/form-validation';
 import '@/app/styles/FormPage.css';
@@ -16,6 +17,7 @@ const FormComponent: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
@@ -34,13 +36,17 @@ const FormComponent: React.FC = () => {
         error={errors.name?.message}
       />
       <div className="fields-row">
-        <InputComponent
-          label="Telefone"
-          type="text"
-          placeholder="(99) 9999[9]-9999"
-          register={register('phone')}
-          error={errors.phone?.message}
-        />
+        <div className="input-group">
+          <label htmlFor="phone">Telefone</label>
+          <InputMask
+            mask="(99) 99999-9999"
+            onChange={(e: any) => setValue('phone', e.target.value)}
+            className='input-field'
+            placeholder="(99) 9999[9]-9999"
+          >
+          </InputMask>
+          {errors.phone && <p className="error">{errors.phone?.message}</p>}
+        </div>
         <InputComponent
           label="E-mail"
           type="email"

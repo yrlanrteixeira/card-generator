@@ -203,12 +203,28 @@
 }
 
 @media (max-width: 480px) {
+  .form-page {
+    margin-top: 0;
+  }
+
+  .form-container {
+    margin-bottom: 80px;
+  }
+
+  .image {
+    width: 220px;
+  }
+
+  .form-container-wrapper {
+    margin-top: 0px;
+  }
+
   .content-header h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .content-header p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .form-container button {
