@@ -47,7 +47,7 @@ export default function ResultPage() {
             <ButtonComponent label="Baixar Cartão" disabled aria-disabled="true" aria-label="Botão desativado para baixar o cartão de visita" />
             <div className="result-text">
               <Link
-                href="https://www.rdstation.com/produtos/marketing/"
+                href="https://app.rdstation.com.br/signup"
                 className="test-link"
                 target="_blank"
                 rel="noopener noreferrer"
